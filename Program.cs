@@ -17,7 +17,47 @@ namespace CalculadoraIMC
 
             double imc = peso / (altura * altura);
 
-            Console.WriteLine("================\n-Status:\n\nNome --> {0}\nAltura --> {1}\nPeso --> {2}\nIMC --> {3}\n================", nome, altura, peso, imc);
+            Console.WriteLine("================\n-Status:\n\nNome --> {0}\nAltura --> {1}\nPeso --> {2}\nIMC --> {3}\nFaixa --> {4}\n================", nome, altura, peso, imc, StatusPeso(imc));
+
+        }
+
+        public static String StatusPeso(double imc)
+        {
+            if (imc < 17)
+            {
+            return "Muito abaixo do peso";
+            }
+
+            if (imc >= 17 && imc <= 18.49)
+            {
+            return "Abaixo do peso";
+            }
+
+            if(imc >= 18.50 && imc <= 24.99)
+            {
+            return "Peso normal";
+            }
+
+            if(imc >= 25 && imc <= 29.99)
+            {
+            return "Acima do peso";
+            }
+
+            if(imc >= 30 && imc <= 34.99)
+            {
+            return "Obesidade I";
+            }
+
+            if(imc >= 35 && imc <= 39.99)
+            {
+            return "Obesidade II (severa)";
+            }
+
+            if(imc > 40)
+            {
+            return "Obesidade III (mórbida)";
+            }
+            return "Valor inválido";
         }
     }
 }
