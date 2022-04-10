@@ -5,6 +5,8 @@
 ## Funcionalidades
 
 - Calcula o IMC
+- Indica Faixa que a pessoa está
+- Mostra quantos quilos a pessoa precisa para alcançar o peso ideal
 
 ## Tecnologias Utilizadas
 
